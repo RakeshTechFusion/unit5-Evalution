@@ -1,3 +1,6 @@
+import eye from "./eye.svg";
+import "../App.css";
+
 export const Input = ({
   type,
   size,
@@ -6,18 +9,11 @@ export const Input = ({
   rightLogoOnClick,
   onChange,
 }) => {
-  const handleChange=null;
   return (
     <div className="inputContainer">
       {/* Add Right Logo */}
-      <input className={`input`}
-      type="checkbox"
-      onChange={handleChange}
-       variant="filled"
-       size="small"
-       rightLogo={size+1}
-       rightLogoOnClick={rightLogo}
-       />
+      <input type={type} className={`input`} />
+      <img style={{ marginLeft: "-30px" }} src={eye} alt="" />
     </div>
   );
 };
